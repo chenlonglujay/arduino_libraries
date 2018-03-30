@@ -1,0 +1,34 @@
+#######################################
+# Syntax Coloring Map For Timer Library
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+LED_signBoard	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+buttonCounter		KEYWORD2
+LED_Mode_initial_set	KEYWORD2
+LED_ON_G	KEYWORD2
+LED_ON_R	KEYWORD2
+LED_OFF_G	   		KEYWORD2
+LED_OFF_R				KEYWORD2
+LED_Breathe_G		KEYWORD2
+LED_Breathe_R		KEYWORD2
+LED_Blink_G			KEYWORD2
+LED_Blink_R			KEYWORD2
+LED_Breathe_all		KEYWORD2
+LED_Blink_all			KEYWORD2
+LED_ON_all				KEYWORD2
+LED_OFF_all	   		KEYWORD2
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+#######################################
+# Constants (LITERAL1)
+#######################################
