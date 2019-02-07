@@ -662,14 +662,18 @@ void punchCounterReceiver::set_play_cancel_voice(bool value) {
 }
 
 void punchCounterReceiver::play_ridicule_voice() {
-
-    if(get_play_once()){
-        ridicule_voice_counter++;
-        if(ridicule_voice_counter == 6) {
-            ridicule_voice_counter = 0;
-        }
-        mp3_play_selected(ridicule_voice_counter);
-    }
+    //if(get_play_ridicule_voice()) {
+        //mp3_start();
+        //if(get_play_once()){
+            ridicule_voice_counter++;
+            if(ridicule_voice_counter == 6) {
+                ridicule_voice_counter = 0;
+            }
+            mp3_play_selected(ridicule_voice_counter);
+        //}
+   /* } else {
+        //mp3_pause();
+    }*/
 }
 
 void punchCounterReceiver::set_play_ridicule_voice(bool value) {
@@ -692,36 +696,40 @@ void punchCounterReceiver::check_start_stop_punch(int numL, int numR) {
     bool LC = get_check_5secs_L();
     bool RC = get_check_5secs_R();
     if(LC && RC) {
-        //Serial.println(F("both check"));
+        Serial.println(F("both check"));
         //both are in start mode
        if(numL==punchL_BF && numR==punchR_BF) {
            set_5secs_check_flag(1);  //timer start to calculate 
        } else {
            set_5secs_check_flag(0);  //timer stop to calculate
-           set_play_ridicule_voice(0); 
+           set_play_ridicule_voice(0);
+           //mp3_pause();
        } 
     } else if (LC && !RC) {
         //LC start,RC pause
-       //Serial.println(F("L check"));
+       Serial.println(F("L check"));
        if(numL==punchL_BF) {
            set_5secs_check_flag(1);  //timer start to calculate 
         } else if (numL>punchL_BF) {
            set_5secs_check_flag(0);  //timer stop to calculate
            set_play_ridicule_voice(0); 
+           //mp3_pause();
         }
     } else if (!RC && LC) {
         //RC start,LC pause
-        //Serial.println(F("R check"));
+        Serial.println(F("R check"));
        if(numR==punchR_BF) {
            set_5secs_check_flag(1);  //timer start to calculate 
         } else if (numR>punchR_BF) {
            set_5secs_check_flag(0);  //timer stop to calculate
            set_play_ridicule_voice(0); 
+           //mp3_pause();
         }
     } else {
-           //Serial.println(F("no check"));
+           Serial.println(F("no check"));
            set_5secs_check_flag(0);  //timer stop to calculate
            set_play_ridicule_voice(0); 
+           //mp3_pause();
     }
     punchL_BF = numL;
     punchR_BF = numR;
