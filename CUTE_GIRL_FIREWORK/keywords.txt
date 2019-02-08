@@ -1,0 +1,57 @@
+#######################################
+# Syntax Coloring Map For Timer Library
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+CUTE_GIRL_FIREWORK	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+cute_girl_firework_initial	KEYWORD2
+interrupt_initial		KEYWORD2
+set_BHST			KEYWORD2
+get_BHST	   		KEYWORD2
+Timer4_initial			KEYWORD2
+Timer5_initial 			KEYWORD2
+set_motor_speed	   		KEYWORD2
+set_motor_direction	   	KEYWORD2
+timer4_ISR			KEYWORD2
+timer5_ISR			KEYWORD2	
+timer4_start			KEYWORD2	
+timer4_stop			KEYWORD2	
+timer5_start			KEYWORD2
+timer5_stop			KEYWORD2
+set_prevent_startup_into_ISR	KEYWORD2
+get_prevent_startup_into_ISR	KEYWORD2
+get_action_seq			KEYWORD2
+set_action_seq			KEYWORD2
+set_limit_sensor_state		KEYWORD2
+get_limit_sensor_state		KEYWORD2
+get_do_once			KEYWORD2
+set_do_once			KEYWORD2
+clear_motor_pulse_count		KEYWORD2
+get_motor_pulse_count		KEYWORD2
+CLPMTR_setting			KEYWORD2
+clear_timer_count		KEYWORD2
+get_delay_ok			KEYWORD2
+set_delay_ok			KEYWORD2
+get_riseHand_heat_BTN_state	KEYWORD2
+turn_on_relay_heat		KEYWORD2
+get_heat_action			KEYWORD2
+set_heat_action			KEYWORD2
+get_heat_count			KEYWORD2
+get_no_heat_count		KEYWORD2
+clear_heat_count		KEYWORD2
+clear_no_heat_count		KEYWORD2
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+#######################################
+# Constants (LITERAL1)
+#######################################
